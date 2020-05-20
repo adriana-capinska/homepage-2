@@ -154,7 +154,7 @@ body{
 
 .container{
     background: #747274;
-    display: inline;
+    display: inline-block;
     width: 100px;
     height: 100px;
     box-sizing: border-box;
@@ -176,30 +176,111 @@ body{
     text-align: center;
     width: 100%;
     border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table__description{
+    border: 3px solid rgb(22, 22, 22, 0.4);
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-radius: 30px;
+    border: 1px solid black;
 }
 
 .table__td{
     border: 1px solid black;
     padding: 3px;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
 .table__td--style{
     empty-cells: hide;
     padding: 0px;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
 .table__div{
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    background: #A5ABAF;
     border-radius: 30px;
     display: flex;
     justify-content: center;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
 .table__th{
     text-align: left;
     border-spacing: 0;
+    border-collapse: collapse;
+}
+
+@media screen and (max-width: 320px){
+    body{
+        background: rgb(49, 46, 41);
+        background: linear-gradient(90deg, rgba(217,214,210,0.7063200280112045) 39%, rgba(188,211,227,0.835171568627451) 69%);
+    }
+    
+    .article{
+    display: block;
+    }
+
+    .aside{
+        display: block;
+    }
+
+    .about-me{
+        display: block;
+    }
+    
+    .weeks-of-lern{
+        display: block;
+    }
+
+    .header{
+        grid-area: header;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation{
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: flex-start;
+        height: auto;
+        background: #A5ABAF;
+        padding: 5px 16px;
+    }
+
+    .container{
+        background: #747274;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        padding-left: 25px;
+        padding-top: 40px;
+        position: relative;
+    }
+    
+    .container__flex{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 400px;
+    }
+
+    .footer{
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        background: #A5ABAF;
+        height: auto;
+        padding: 5px 16px;
+    }
 }
