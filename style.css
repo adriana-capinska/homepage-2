@@ -1,0 +1,75 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background: rgb(217,214,210);
+    background: linear-gradient(90deg, rgba(217,214,210,0.7063200280112045) 39%, rgba(188,211,227,0.835171568627451) 69%);
+}
+
+.grid{
+    display: grid;
+}
+
+.main{
+    display: grid;
+}
+.about-me{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "article aside";
+    grid-template-columns: 1fr 400px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.header{
+    grid-area: header;
+}
+
+.article{
+    grid-area: article;
+}
+.weeks-of-lern{
+    display: grid;
+    grid-template-areas: 
+    "article__week-one article__week-two article__week-three"
+    "article__week-four article__week-five article__week-six";
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.article__week-one{
+    grid-area: article__week-one;
+}
+
+.article__week-two{
+    grid-area: article__week-two;
+}
+
+.article__week-three{
+    grid-area: article__week-three;
+}
+
+.article__week-four{
+    grid-area: article__week-four;
+}
+
+.article__week-five{
+    grid-area: article__week-five;
+}
+
+.article__week-six{
+    grid-area: article__week-six;
+}
+.aside{
+    grid-area: aside;
+}
+
+
+.footer{
+    grid-area: footer;
+}
