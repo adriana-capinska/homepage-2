@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="normalize.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-    <header class="navigation">
-        <nav>
-            <a class="header__link" href="index.html">strona główna</a>
-            <a class="header__link" href="tydzien1-html.html">tydzień I</a>
-            <a class="header__link" href="tydzien2-html.html">tydzień II</a>
-            <a class="header__link" href="tydzien3-html.html">tydzień III</a>
-            <a class="header__link" href="tydzien4-html.html">tydzień IV</a>
+    <header id="top" class="header__navigation">
+        <nav class="navigation navigation--js">
+            <a class="header__link" href="../index.html">strona główna</a>
+            <a class="header__link" href="../html/tydzien1-html.html">tydzień I</a>
+            <a class="header__link" href="../html/tydzien2-html.html">tydzień II</a>
+            <a class="header__link" href="../html/tydzien3-html.html">tydzień III</a>
+            <a class="header__link" href="../html/tydzien4-html.html">tydzień IV</a>
         </nav>
+        <button class="hamburger hamburger--js">MENU</button>
     </header>
     <main class="main">
         <article class="article__week-one">
@@ -51,9 +51,10 @@
         </article>
     </main>
     <footer class="footer">
-        <p> strona Adriany Capińskiej postała w celach edukacyjnych do jej własnego użytku.
+        <p> strona Adriany Capińskiej powstała w celach edukacyjnych do jej własnego użytku.
             <a class="footer__link" href="#top">Wróć na górę strony</a></p>
     </footer>
+    <script src="../js/navigation.js"></script>
 </body>
 
 </html>

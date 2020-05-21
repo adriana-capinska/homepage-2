@@ -1,9 +1,11 @@
 html{
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 body{
     background: rgb(217,214,210);
     background: linear-gradient(90deg, rgba(217,214,210,0.7063200280112045) 39%, rgba(188,211,227,0.835171568627451) 69%);
@@ -15,6 +17,7 @@ body{
 
 .main{
     padding: 20px 20%;
+    margin: 20px auto 0;
 }
 
 .navigation{
@@ -128,6 +131,7 @@ body{
     background-color: #F2F3AE;
     padding: 30px 30px;
 }
+
 .aside{
     grid-area: aside;
     display: flex;
@@ -227,17 +231,28 @@ body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-left: 20px;
+    margin-left: auto;
 }
+
+.hamburger{
+    display: none;
+}
+
+
 
 @media screen and (max-width: 900px){
     body{
         background: rgb(49, 46, 41);
         background: linear-gradient(90deg, rgba(217,214,210,0.7063200280112045) 39%, rgba(188,211,227,0.835171568627451) 69%);
     }
+
+    .main{
+        max-width: 1000px;
+        margin: 20px auto 0;
+    }
     
     .article{
-    display: block;
+        display: block;
     }
 
     .aside{
@@ -252,19 +267,44 @@ body{
         display: block;
     }
 
-    .header{
-        grid-area: header;
-        display: flex;
-        justify-content: center;
+    .header__navigation{
+        min-width: 60px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+    }
+    
+    .header__title--js{
+        max-width: 400px;
     }
 
     .navigation{
+        grid-area: header;
         display: flex;
-        flex-flow: row-reverse wrap;
-        justify-content: flex-start;
-        height: auto;
+        justify-content: center;
         background: #A5ABAF;
-        padding: 5px 16px;
+        padding: 5px 16px; 
+        display: none;
+    }
+
+    .navigation--open{
+       display: block;
+    }
+
+    .hamburger{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgb(49, 46, 41);
+        background: linear-gradient(90deg, rgba(217,214,210,0.7063200280112045) 39%, rgba(188,211,227,0.835171568627451) 69%);
+        display: block;
+    }
+
+    .header__link{
+        color: #ffffff;
+        display: block; 
+        margin: 5px;
     }
     
     .article__box-model{
